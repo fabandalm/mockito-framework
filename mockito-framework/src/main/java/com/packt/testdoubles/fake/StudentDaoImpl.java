@@ -60,7 +60,7 @@ public class StudentDaoImpl implements StudentDao {
 		}
 	}
 	
-	public int[] update(String sql, List<Map<String,Object>> params) {
+	int[] update(String sql, List<Map<String,Object>> params) {
 		return new JdbcSupport().batchUpdate(sql, params);
 	}
 	
