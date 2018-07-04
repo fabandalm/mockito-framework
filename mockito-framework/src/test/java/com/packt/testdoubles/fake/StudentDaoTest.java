@@ -22,9 +22,10 @@ public class StudentDaoTest {
 		
 		int[] valuesToReturn;
 		
-		int[] update(String sql, List<Map<String,Object>> params) {
+		int[] update(String sql, List<Map<String, Object>> params) {
 			
 			Integer count = sqlCount.get(sql);
+			
 			if(count == null){
 				sqlCount.put(sql, params.size());
 			}else{
@@ -34,7 +35,14 @@ public class StudentDaoTest {
 			if (valuesToReturn != null) {
 				return valuesToReturn;
 			}
-			return valuesToReturn;
+			
+			int[] val = new int[params.size()];
+			
+			for (int i = 0; i < params.size(); i++) {
+				val[i] = 1;
+			}
+			
+			return val;			
 			
 		}
 		
